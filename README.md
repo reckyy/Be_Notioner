@@ -1,6 +1,10 @@
-12/15 Figmaリンク追記
+12/15 Figma
+***
 https://www.figma.com/file/e6SwyB2lJBCQzLi5FFQLUb/Untitled?node-id=0%3A1&t=hZTEQE8qyp2B9uwT-1
 
+ER図
+***
+https://drive.google.com/file/d/11oEc1KN_tY7xpTsoCehIk5xDMdgtyt7T/view?usp=sharing
 # Be_Notioner
 ### サービス名
 ---
