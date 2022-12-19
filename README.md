@@ -1,10 +1,4 @@
-12/15 Figma
-***
-https://www.figma.com/file/e6SwyB2lJBCQzLi5FFQLUb/Untitled?node-id=0%3A1&t=hZTEQE8qyp2B9uwT-1
 
-ER図
-***
-https://drive.google.com/file/d/11oEc1KN_tY7xpTsoCehIk5xDMdgtyt7T/view?usp=sharing
 # Be_Notioner
 ### サービス名
 ---
@@ -83,8 +77,12 @@ Be Notioner(仮）
 ---
 - 企画〜技術調査 : 12/13 〆
 - README作成〜ER図作成 : 12/18 〆
-- メイン機能実装 : 12/18〜1/30
-- MVPリリース : 1/30 〆
-- 本リリース : 2/7 〆
-ただし、以下の事情により上記のスケジュールを一部変更するかも知れません。
-プログラミングキャンプ（1/16~2/10）への申込を済ませ、現在選考中。
+- メイン機能実装 : 実装開始日については、定かではないため一旦保留とする。
+
+12/15 Figma
+***
+https://www.figma.com/file/e6SwyB2lJBCQzLi5FFQLUb/Untitled?node-id=0%3A1&t=hZTEQE8qyp2B9uwT-1
+
+ER図
+***
+https://drive.google.com/file/d/11oEc1KN_tY7xpTsoCehIk5xDMdgtyt7T/view?usp=sharing
