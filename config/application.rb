@@ -38,4 +38,14 @@ module BeNotioner
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
+  #rails g config
+  config.generators do |g|
+    g.helper false 
+    g.test_framework :rspec,
+      fixtures: false,
+      routing_specs: false,
+      view_specs: false,
+      helper_specs: false,
+      request_specs: false
+  end
 end
