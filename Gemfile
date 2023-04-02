@@ -32,6 +32,7 @@ gem "jbuilder"
 
 #18n対応
 gem 'rails-i18n'
+gem 'enum_help'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

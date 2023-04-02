@@ -89,6 +89,8 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     diff-lcs (1.5.0)
+    enum_help (0.0.19)
+      activesupport (>= 3.0.0)
     erubi (1.12.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  enum_help
   factory_bot_rails
   importmap-rails
   jbuilder
