@@ -73,3 +73,9 @@ group :development do
   gem 'rubocop-rspec', require: false
 end
 
+group :test do
+  gem 'capybara'
+  gem 'webdrivers'
+  #これをインストールしておけば、自動でブラウザが開かれる
+  gem 'launchy'
+end
