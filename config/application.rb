@@ -43,6 +43,7 @@ module BeNotioner
 
     #rails g config
     config.generators do |g|
+      g.skip_routes true
       g.helper false 
       g.test_framework :rspec,
         fixtures: false,
