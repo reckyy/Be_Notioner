@@ -1,0 +1,9 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    Sign Up: '登録'
+    logout: 'ログアウト'
+  users:
+    new:
+      
+  
