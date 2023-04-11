@@ -34,7 +34,10 @@
       </div>
 
       <div class="flex items-center justify-center bg-gray-100 p-4">
-        <p class="text-center text-sm text-gray-500">Don't have an account? <a href="#" class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Register</a></p>
+        <p class="text-center text-sm text-gray-500">Don't have an account?&nbsp;</p> <!-- &nbsp;は半角スペース -->
+        <div class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 text-center text-sm">
+          <%= link_to 'Sign Up', new_user_path %>
+        </div>
       </div>
     </form>
   </div>
