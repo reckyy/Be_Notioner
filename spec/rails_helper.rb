@@ -63,4 +63,7 @@ RSpec.configure do |config|
 
   #LoginSupporモジュールをインクルード
   config.include LoginSupport
+
+  #FactoryBot.を省略するために
+  config.include FactoryBot::Syntax::Methods
 end
