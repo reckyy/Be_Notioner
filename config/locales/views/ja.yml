@@ -8,8 +8,4 @@ ja:
     google_login: 'Login with Google'
     non_registered: 'まだアカウントをお持ちではないですか？'
     already_registered: '既にアカウントをお持ちですか？'
-  users:
-    new:
-  user_sessions:
-    new:
-      new_register: '新規登録'
+

@@ -1,0 +1,9 @@
+ja:
+  user_sessions:
+    new:
+      new_register: '新規登録'
+    create:
+      success: 'ログインに成功しました！'
+      danger: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトに成功しました'
