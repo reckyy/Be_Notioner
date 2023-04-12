@@ -1,9 +1,15 @@
 ja:
   defaults:
+    be_notioner: 'Be Notioner'
     login: 'ログイン'
-    Sign Up: '登録'
+    sign_up: '登録'
     logout: 'ログアウト'
+    social_login: 'Log in with social'
+    google_login: 'Login with Google'
+    non_registered: 'まだアカウントをお持ちではないですか？'
+    already_registered: '既にアカウントをお持ちですか？'
   users:
     new:
-      
-  
+  user_sessions:
+    new:
+      new_register: '新規登録'
