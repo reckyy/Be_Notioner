@@ -1,5 +1,7 @@
 ja:
   user_sessions:
+    new:
+      login: 'ログイン'
     create:
       success: 'ログインに成功しました！'
       danger: 'ログインに失敗しました'

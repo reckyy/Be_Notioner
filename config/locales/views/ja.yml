@@ -1,7 +1,7 @@
 ja:
   defaults:
     be_notioner: 'Be Notioner'
-    login: 'ログイン'
+    login: 'Login'
     sign_up: '登録'
     logout: 'ログアウト'
     social_login: 'Log in with social'
