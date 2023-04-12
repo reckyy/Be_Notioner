@@ -1,3 +1,7 @@
 ja:
   users:
     new:
+      new_register: '新規登録'
+    create:
+      success: '登録に成功しました'
+      danger: '登録に失敗しました'
