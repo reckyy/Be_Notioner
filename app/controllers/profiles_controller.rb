@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
     if @user.update(user_params)
       redirect_to profile_path, success: (t '.profile_update_success')
     else
-      flash.now[:danger] = (t 'profile_update_failed')
+      flash.now[:danger] = (t '.profile_update_failed')
       render :edit, status: :unprocessable_entity
     end
   end
