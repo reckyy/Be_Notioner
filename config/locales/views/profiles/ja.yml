@@ -1,5 +1,9 @@
 ja:
   profiles:
+    edit:
+      profile_update: '更新'
+    show:
+      profile_update: '編集'
     update:
       profile_update_success: '更新に成功しました'
       profile_update_failed: '更新に失敗しました'
