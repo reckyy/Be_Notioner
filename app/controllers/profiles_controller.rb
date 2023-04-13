@@ -12,6 +12,8 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def show; end
+
   private
   def set_user
     @user = User.find(current_user.id)
