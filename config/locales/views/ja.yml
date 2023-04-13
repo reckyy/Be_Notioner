@@ -3,6 +3,7 @@ ja:
     be_notioner: 'Be Notioner'
     login: 'Login'
     sign_up: '登録'
+    profile: 'プロフィール'
     logout: 'ログアウト'
     social_login: 'Log in with social'
     google_login: 'Login with Google'
