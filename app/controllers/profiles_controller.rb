@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user,only: %i[edit update]
+  before_action :set_user,only: %i[edit update show destroy]
 
   def edit; end
 
@@ -14,6 +14,11 @@ class ProfilesController < ApplicationController
   end
 
   def show; end
+
+  def destroy
+    @user.destroy!
+    redirect_to root_path, status: :see_other, info: (t '.user_deleted')
+  end
 
   private
   def set_user
