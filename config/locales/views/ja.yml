@@ -5,6 +5,7 @@ ja:
     sign_up: '登録'
     profile: 'プロフィール'
     logout: 'ログアウト'
+    quit: '退会する'
     social_login: 'Log in with social'
     google_login: 'Login with Google'
     non_registered: 'まだアカウントをお持ちではないですか？'
