@@ -7,3 +7,5 @@ ja:
     update:
       profile_update_success: '更新に成功しました'
       profile_update_failed: '更新に失敗しました'
+    destroy:
+      user_deleted: '退会しました'
