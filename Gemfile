@@ -37,6 +37,9 @@ gem 'enum_help'
 #4/8 sorcery
 gem 'sorcery'
 
+#4/17 画像の変換ツール
+gem 'mini_magick'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
