@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
+      @user.avatar.attach(params[:user][:avatar]) if @user.avatar.blank? #ユーザーが画像選択しなかった場合、sampleに戻ってしまうため。
       redirect_to profile_path, success: (t '.profile_update_success')
     else
       flash.now[:danger] = (t '.profile_update_failed')
