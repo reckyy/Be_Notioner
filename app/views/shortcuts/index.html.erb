@@ -3,11 +3,176 @@
   <thead>
   <tr>
     <th></th>
-    <th>Keys</th>
-    <th>説明</th>
-    <th>Category</th>
+    <th>動作</th>
+    <th>markdown</th>
+    <th>shortcut</th>
   </tr>
-</thead>
-    <%= render @shortcuts %>
+  </thead>
+  <tbody>
+    <!-- todoリスト -->
+    <tr>
+      <th>1</th>
+      <td>ToDoリスト</td>
+      <td>ブロックの文頭で「[]」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">4</kbd>
+      </td>
+    </tr>
+    <!-- 箇条書きリスト -->
+    <tr class="active">
+      <th>2</th>
+      <td>箇条書きリスト</td>
+      <td>ブロックの文頭で「* / - / +」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">5</kbd>
+      </td>
+    </tr>
+    <!-- トグルリスト -->
+    <tr>
+      <th>3</th>
+      <td>トグルリスト</td>
+      <td>ブロックの文頭で「>」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">7</kbd>
+      </td>
+    </tr>
+    <!-- コード -->
+    <tr class="active">
+      <th>4</th>
+      <td>コード</td>
+      <td>ブロックの文頭で「```」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">8</kbd>
+      </td>
+    </tr>
+    <!-- インラインコード -->
+    <tr>
+      <th>5</th>
+      <td>インラインコード</td>
+      <td>コードを「``」で囲む</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">e</kbd>
+      </td>
+    </tr>
+    <!-- 区切り線 -->
+    <tr class="active">
+      <th>6</th>
+      <td>区切り線</td>
+      <td>ブロックの文頭で「---」</td>
+      <td></td>
+    </tr>
+    <!-- 太字にする -->
+    <tr>
+      <th>7</th>
+      <td>太字にする</td>
+      <td>文字列を「**」で囲む</td>
+      <td>
+        文字列を選択して
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">B</kbd>
+      </td>
+    </tr>
+    <!-- トグルリスト -->
+    <tr class="active">
+      <th>8</th>
+      <td>取り消し線</td>
+      <td>文字列を「~~」で囲む</td>
+      <td>
+        文字列を選択して
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">S</kbd>
+      </td>
+    </tr>
+    <!-- 下線を引く -->
+    <tr>
+      <th>9</th>
+      <td>下線を引く</td>
+      <td></td>
+      <td>
+        文字列を選択して
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">U</kbd>
+      </td>
+    </tr>
+    <!-- リンクを追加する -->
+    <tr class="active">
+      <th>10</th>
+      <td>リンクを追加する</td>
+      <td></td>
+      <td>
+        文字列を選択して
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">K</kbd>
+      </td>
+    </tr>
+    <!-- 検索画面を開く -->
+    <tr>
+      <th>11</th>
+      <td>検索画面を開く</td>
+      <td></td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">P</kbd>
+      </td>
+    </tr>
+    <!-- 新しいページを作成する -->
+    <tr class="active">
+      <th>12</th>
+      <td>新しいページを作成する</td>
+      <td></td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">N</kbd>
+      </td>
+    </tr>
+    <!-- 1ページ前に戻る -->
+    <tr>
+      <th>13</th>
+      <td>1ページ前に戻る</td>
+      <td></td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">[</kbd>
+      </td>
+    </tr>
+    <!-- 1ページ先に進む -->
+    <tr class="active">
+      <th>14</th>
+      <td>1ページ先に進む</td>
+      <td></td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">]</kbd>
+      </td>
+    </tr>
+  </tbody>
   </table>
 </div>
