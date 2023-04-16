@@ -88,4 +88,6 @@ group :test do
   gem 'webdrivers'
   #これをインストールしておけば、自動でブラウザが開かれる
   gem 'launchy'
+  #ダミーデータの簡易作成
+  gem 'faker'
 end
