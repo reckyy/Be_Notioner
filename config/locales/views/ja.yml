@@ -6,6 +6,7 @@ ja:
     profile: 'プロフィール'
     logout: 'ログアウト'
     quit: '退会する'
+    contact: 'お問合せ'
     social_login: 'Log in with social'
     google_login: 'Login with Google'
     non_registered: 'まだアカウントをお持ちではないですか？'
