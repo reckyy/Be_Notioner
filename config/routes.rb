@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   #お問合せフォーム
   get 'contact', to: 'static_pages#contact'
+  get 'privacy', to: 'static_pages#privacy'
 
   resource :profile, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
