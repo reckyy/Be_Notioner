@@ -36,11 +36,15 @@
         </button>
       </div>
 
-      <div class="flex items-center justify-center bg-gray-100 p-4">
-        <p class="text-center text-sm text-gray-500"><%= (t 'defaults.non_registered') %>&nbsp;</p> <!-- &nbsp;は半角スペース -->
-        <div class="text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 text-center text-sm">
-          <%= link_to (t 'defaults.sign_up'), new_user_path %>
-        </div>
+      <div class="flex flex-col items-center justify-center bg-gray-100 p-4">
+        <p class="text-center text-sm text-gray-500"><%= (t 'defaults.non_registered') %>&nbsp;
+          <%= link_to (t 'defaults.sign_up'), new_user_path, class: "text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 text-center text-sm" %>
+        </p> <!-- &nbsp;は半角スペース -->
+
+        <p class="text-center text-sm text-gray-500">パスワードをお忘れの方は&nbsp;
+          <%= link_to "こちら", new_password_reset_path, class: "text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700 text-center text-sm" %>
+        </p> 
+
       </div>
     <% end %>
     </div>
