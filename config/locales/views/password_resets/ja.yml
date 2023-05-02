@@ -1,0 +1,7 @@
+ja:
+  password_resets:
+    create:
+      success: 'リクエストの送信に成功しました'
+    update:
+      success: 'パスワードのリセットに成功しました'
+      fail: 'パスワードのリセットに失敗しました'
