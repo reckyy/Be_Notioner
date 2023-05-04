@@ -57,3 +57,8 @@ node_modules/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+#Ignore config files
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
