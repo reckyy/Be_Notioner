@@ -1,5 +1,7 @@
 ja:
   password_resets:
+    new:
+      submit: '送信'
     create:
       success: 'リクエストの送信に成功しました'
     update:
