@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
   resources :shortcuts, only: %i[index]
+  resources :password_resets, only: %i[new create edit update]
+
+  #letter_opener_webにアクセスするために
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end
