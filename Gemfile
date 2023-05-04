@@ -81,6 +81,9 @@ group :development do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+
+  #開発環境で実際のメールは送られないように
+  gem 'letter_opener_web', '~> 1.0'
 end
 
 group :test do

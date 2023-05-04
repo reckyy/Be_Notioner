@@ -122,6 +122,12 @@ GEM
     jwt (2.7.0)
     launchy (2.5.2)
       addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
+    letter_opener_web (1.4.1)
+      actionmailer (>= 3.2)
+      letter_opener (~> 1.0)
+      railties (>= 3.2)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -317,6 +323,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   launchy
+  letter_opener_web (~> 1.0)
   mini_magick
   pg (~> 1.1)
   puma (~> 5.0)
