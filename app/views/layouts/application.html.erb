@@ -19,13 +19,13 @@
     </script>
   </head>
 
-  <body>
+  <body class="max-h-screen">
     <% if logged_in? %>
       <%= render 'shared/header' %>
     <% else %>
       <%= render 'shared/before_login_header' %>
     <% end %>
-    <main class="container mx-auto">
+    <main>
       <%= render 'shared/flash' %>
       <%= yield %>
     </main>
