@@ -7,7 +7,7 @@
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-3 xl:gap-6">
 
     <!-- Card -->
-    <a class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all" href="#">
+    <%= link_to shortcuts_path, class: "group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all" do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="16" height="16" stroke-width="1.4"  stroke="currentColor" fill="currentColor" class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
       </svg>
@@ -26,7 +26,7 @@
           </svg>
         </p>
       </div>
-    </a>
+    <% end %>
     <!-- End Card -->
 
     <!-- Card -->
