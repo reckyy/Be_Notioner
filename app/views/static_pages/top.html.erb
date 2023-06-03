@@ -16,7 +16,7 @@
       <div>
         <div>
           <h3 class="block font-bold text-gray-800">ショートカット</h3>
-          <p class="text-gray-600">ショートカットを使いこなして、Notionでの作業速度を上げよう!</p>
+          <p class="text-gray-600">ショートカットを使いこなして、Notionでの作業速度を上げよう。</p>
         </div>
 
         <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800">
@@ -39,7 +39,7 @@
       <div>
         <div>
           <h3 class="block font-bold text-gray-800">テンプレート</h3>
-          <p class="text-gray-600">まずは、テンプレートを使ってNotionになれるところから始めよう!</p>
+          <p class="text-gray-600">まずは、テンプレートを使ってNotionになれるところから始めよう。</p>
         </div>
 
         <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800">
@@ -53,7 +53,7 @@
     <!-- End Card -->
 
     <!-- Card -->
-    <a class="group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all" href="#">
+    <%= link_to profile_path, class: "group flex gap-y-6 w-full h-full hover:bg-gray-100 rounded-lg p-5 transition-all" do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="flex-shrink-0 w-8 h-8 text-gray-800 mt-0.5 mr-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
@@ -61,7 +61,7 @@
       <div>
         <div>
           <h3 class="block font-bold text-gray-800">プロフィール</h3>
-          <p class="text-gray-600">自己紹介文にTwitterなどのリンクを掲載してみるとか、、？</p>
+          <p class="text-gray-600">ログインして自分のプロフィールを作成してみよう。</p>
         </div>
 
         <p class="mt-3 inline-flex items-center gap-x-2 text-sm font-semibold text-gray-800">
@@ -71,7 +71,7 @@
           </svg>
         </p>
       </div>
-    </a>
+    <% end %>
     <!-- End Card -->
 
     <!-- Card -->
