@@ -61,6 +61,8 @@ gem 'config'
 gem 'fog-aws'
 gem "aws-sdk-s3", require: false 
 
+gem 'carrierwave'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
