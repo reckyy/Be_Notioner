@@ -63,6 +63,8 @@ gem "aws-sdk-s3", require: false
 
 gem 'carrierwave'
 
+gem 'dotenv-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
