@@ -58,6 +58,9 @@ gem "bootsnap", require: false
 #host情報をconfigに追加
 gem 'config'
 
+gem 'fog-aws'
+gem "aws-sdk-s3", require: false 
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
