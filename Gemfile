@@ -67,6 +67,8 @@ gem 'dotenv-rails'
 
 gem 'meta-tags'
 
+gem 'sitemap_generator'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
