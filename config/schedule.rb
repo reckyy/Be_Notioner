@@ -14,7 +14,7 @@
 # end
 #
 every 1.day, at: '8:00 am' do
-  rails 'sitemap:refresh'
+  rake '-s sitemap:refresh'
 end
 
 # Learn more: http://github.com/javan/whenever
