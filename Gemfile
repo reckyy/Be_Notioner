@@ -65,6 +65,8 @@ gem 'carrierwave'
 
 gem 'dotenv-rails'
 
+gem 'meta-tags'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
