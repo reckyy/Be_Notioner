@@ -69,6 +69,9 @@ gem 'meta-tags'
 
 gem 'sitemap_generator'
 
+#定期タスクの実行
+gem 'whenever'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
