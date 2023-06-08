@@ -1,6 +1,6 @@
 ja:
   defaults:
-    be_notioner: 'BeNotioner'
+    be_notioner: 'Be Notioner'
     login: 'Login'
     sign_up: '登録'
     profile: 'プロフィール'
