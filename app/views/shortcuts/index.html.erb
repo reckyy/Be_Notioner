@@ -10,9 +10,48 @@
   </tr>
   </thead>
   <tbody>
-    <!-- todoリスト -->
+    <!-- 見出し1 -->
     <tr>
       <th>1</th>
+      <td>見出し1</td>
+      <td>ブロックの文頭で「#」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">1</kbd>
+      </td>
+    </tr>
+    <!-- 見出し2 -->
+    <tr class="active">
+      <th>2</th>
+      <td>見出し2</td>
+      <td>ブロックの文頭で「##」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">2</kbd>
+      </td>
+    </tr>
+    <!-- 見出し3 -->
+    <tr>
+      <th>3</th>
+      <td>見出し3</td>
+      <td>ブロックの文頭で「###」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">3</kbd>
+      </td>
+    </tr>
+    <!-- todoリスト -->
+    <tr class="active">
+      <th>4</th>
       <td>ToDoリスト</td>
       <td>ブロックの文頭で「[]」</td>
       <td>
@@ -24,8 +63,8 @@
       </td>
     </tr>
     <!-- 箇条書きリスト -->
-    <tr class="active">
-      <th>2</th>
+    <tr>
+      <th>5</th>
       <td>箇条書きリスト</td>
       <td>ブロックの文頭で「* / - / +」+「スペース」</td>
       <td>
@@ -36,9 +75,22 @@
         <kbd class="kbd">5</kbd>
       </td>
     </tr>
+    <!-- 番号付きリスト -->
+    <tr class="active">
+      <th>6</th>
+      <td>番号付きリスト</td>
+      <td>ブロックの文頭で「1. / a. / i.」+「スペース」</td>
+      <td>
+        <kbd class="kbd">⌘</kbd>
+        +
+        <kbd class="kbd">⌥</kbd>
+        +
+        <kbd class="kbd">6</kbd>
+      </td>
+    </tr>
     <!-- トグルリスト -->
     <tr>
-      <th>3</th>
+      <th>7</th>
       <td>トグルリスト</td>
       <td>ブロックの文頭で「>」+「スペース」</td>
       <td>
@@ -51,7 +103,7 @@
     </tr>
     <!-- コード -->
     <tr class="active">
-      <th>4</th>
+      <th>8</th>
       <td>コード</td>
       <td>ブロックの文頭で「```」</td>
       <td>
@@ -64,7 +116,7 @@
     </tr>
     <!-- インラインコード -->
     <tr>
-      <th>5</th>
+      <th>9</th>
       <td>インラインコード</td>
       <td>コードを「``」で囲む</td>
       <td>
@@ -73,16 +125,23 @@
         <kbd class="kbd">e</kbd>
       </td>
     </tr>
-    <!-- 区切り線 -->
+    <!-- 引用 -->
     <tr class="active">
-      <th>6</th>
+      <th>10</th>
+      <td>引用</td>
+      <td>ブロックの文頭で「"」+「スペース」</td>
+      <td></td>
+    </tr>
+    <!-- 区切り線 -->
+    <tr>
+      <th>11</th>
       <td>区切り線</td>
       <td>ブロックの文頭で「---」</td>
       <td></td>
     </tr>
     <!-- 太字にする -->
-    <tr>
-      <th>7</th>
+    <tr class="active">
+      <th>12</th>
       <td>太字にする</td>
       <td>文字列を「**」で囲む</td>
       <td>
@@ -93,8 +152,8 @@
       </td>
     </tr>
     <!-- トグルリスト -->
-    <tr class="active">
-      <th>8</th>
+    <tr>
+      <th>13</th>
       <td>取り消し線</td>
       <td>文字列を「~~」で囲む</td>
       <td>
@@ -107,8 +166,8 @@
       </td>
     </tr>
     <!-- 下線を引く -->
-    <tr>
-      <th>9</th>
+    <tr class="active">
+      <th>14</th>
       <td>下線を引く</td>
       <td></td>
       <td>
@@ -119,8 +178,8 @@
       </td>
     </tr>
     <!-- リンクを追加する -->
-    <tr class="active">
-      <th>10</th>
+    <tr>
+      <th>15</th>
       <td>リンクを追加する</td>
       <td></td>
       <td>
@@ -131,8 +190,8 @@
       </td>
     </tr>
     <!-- 検索画面を開く -->
-    <tr>
-      <th>11</th>
+    <tr class="active">
+      <th>16</th>
       <td>検索画面を開く</td>
       <td></td>
       <td>
@@ -142,8 +201,8 @@
       </td>
     </tr>
     <!-- 新しいページを作成する -->
-    <tr class="active">
-      <th>12</th>
+    <tr>
+      <th>17</th>
       <td>新しいページを作成する</td>
       <td></td>
       <td>
@@ -153,8 +212,8 @@
       </td>
     </tr>
     <!-- 1ページ前に戻る -->
-    <tr>
-      <th>13</th>
+    <tr class="active">
+      <th>18</th>
       <td>1ページ前に戻る</td>
       <td></td>
       <td>
@@ -164,8 +223,8 @@
       </td>
     </tr>
     <!-- 1ページ先に進む -->
-    <tr class="active">
-      <th>14</th>
+    <tr>
+      <th>19</th>
       <td>1ページ先に進む</td>
       <td></td>
       <td>
@@ -175,8 +234,8 @@
       </td>
     </tr>
     <!-- ダークモードとの切り替え -->
-    <tr>
-      <th>15</th>
+    <tr class="active">
+      <th>20</th>
       <td>ダークモードとの切り替え</td>
       <td></td>
       <td>
