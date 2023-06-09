@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   #sitemapへのルーティング
-  get '/sitemap', to: redirect("https://s3-ap-northeast-1.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/sitemaps/sitemap.xml.gz")
+  get '/sitemap', to: redirect("https://s3-ap-northeast-1.amazonaws.com/be-notioner.com/sitemaps/sitemap.xml.gz")
 end
