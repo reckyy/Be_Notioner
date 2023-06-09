@@ -64,4 +64,4 @@ config/settings/*.local.yml
 config/environments/*.local.yml
 
 #Ignore sitemap
-public/sitemap.xml.gz
+public/sitemaps/sitemap.xml.gz
