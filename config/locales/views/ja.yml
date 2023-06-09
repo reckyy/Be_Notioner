@@ -1,13 +1,15 @@
 ja:
   defaults:
     be_notioner: 'Be Notioner'
-    login: 'Login'
+    login: 'ログイン'
     sign_up: '登録'
     profile: 'プロフィール'
     logout: 'ログアウト'
     quit: '退会する'
     shortcut: 'ショートカット'
     templates: 'テンプレート'
+    questions: '質問'
+    articles: '記事'
     contact: 'お問合せ'
     privacy: 'プライバシーポリシー'
     terms: '利用規約'
