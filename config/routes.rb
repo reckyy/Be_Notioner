@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   resources :shortcuts, only: %i[index]
   resources :password_resets, only: %i[new create edit update]
 
+  #/google_login_api/callbackに来るPOSTリクエストをcallbackアクションで
+  post '/google_login_api/callback', to: 'google_login_api#callback'
+
   #letter_opener_webにアクセスするために
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 

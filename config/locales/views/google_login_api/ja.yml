@@ -1,0 +1,6 @@
+ja:
+  google_login_api:
+    callback:
+      success: 'ログインしました'
+    verify_g_csrf_token:
+      fail: 'ログインに失敗しました'
