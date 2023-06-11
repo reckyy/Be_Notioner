@@ -5,7 +5,7 @@ class GoogleLoginApiController < ApplicationController
   skip_before_action :require_login
 
   protect_from_forgery except: :callback
-  before_action :verify_g_csrf_token
+  before_action :verify_g_csrf_token, only: :callback
 
   def callback
     if params[:credential].present?
