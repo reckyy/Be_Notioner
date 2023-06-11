@@ -3,4 +3,4 @@ ja:
     callback:
       success: 'ログインしました'
     verify_g_csrf_token:
-      fail: '不正なアクセスです'
+      fail: 'ログインに失敗しました'
