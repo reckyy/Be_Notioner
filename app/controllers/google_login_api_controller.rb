@@ -10,9 +10,12 @@ class GoogleLoginApiController < ApplicationController
   def callback
     if params[:credential].present?
       payload = Google::Auth::IDTokens.verify_oidc(params[:credential], aud: ENV['DATA_CLIENT_ID'])
-      user = User.find_or_initialize_by(email: payload['email'])
+      user = User.find_or_initialize_by(email: payload['email'], login_type: :google)
 
-      if user.save
+      #もしすでにユーザーを作成していて、同じメールアドレスでgoogleログインしたいとなった時
+      user.name ||= payload['name']
+
+      if user.save!
         auto_login(user)
         redirect_to root_path, success: (t '.success')
       else
@@ -22,6 +25,7 @@ class GoogleLoginApiController < ApplicationController
     else
       redirect_to login_path, warning: (t '.fail')
     end
+  end
 
   private
 
