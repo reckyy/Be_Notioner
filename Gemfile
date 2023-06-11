@@ -72,6 +72,9 @@ gem 'sitemap_generator'
 #定期タスクの実行
 gem 'whenever'
 
+#GoogleAuthのライブラリ、Googleログイン用
+gem 'googleauth'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
