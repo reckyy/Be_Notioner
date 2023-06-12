@@ -3,5 +3,5 @@ ja:
     new:
       new_register: '新規登録'
     create:
-      success: '登録に成功しました'
+      success: 'ログインしました'
       danger: '登録に失敗しました'
