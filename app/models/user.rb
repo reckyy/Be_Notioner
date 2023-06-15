@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   validates :login_type, presence: true
 
-  has_many :templates
+  has_many :templates, dependent: :destroy
 
   enum login_type: { sorcery: 0, google: 1 }
 
