@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
   resources :shortcuts, only: %i[index]
   resources :password_resets, only: %i[new create edit update]
+  resources :templates, only: %i[index]
 
   #/google_login_api/callbackに来るPOSTリクエストをcallbackアクションで
   post '/google_login_api/callback', to: 'google_login_api#callback'
