@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact'
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'
-  get 'templates', to: 'static_pages#templates'
 
   resource :profile, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
