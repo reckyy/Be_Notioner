@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   validates :login_type, presence: true
 
+  has_many :templates
+
   enum login_type: { sorcery: 0, google: 1 }
 
   has_one_attached :avatar do |attachable|
