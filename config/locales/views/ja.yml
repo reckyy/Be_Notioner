@@ -19,4 +19,7 @@ ja:
     non_registered: 'まだアカウントをお持ちではないですか？'
     already_registered: '既にアカウントをお持ちですか？'
     require_login: 'ログインしてください'
+  time:
+    formats:
+      short: "%m/%d %H:%M"
 
