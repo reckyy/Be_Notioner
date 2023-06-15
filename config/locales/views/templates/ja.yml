@@ -1,0 +1,5 @@
+ja:
+  templates:
+    create:
+      success: '投稿に成功しました'
+      fail: '投稿に失敗しました'
