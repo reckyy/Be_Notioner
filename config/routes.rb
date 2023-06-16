@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   get 'contact', to: 'static_pages#contact'
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'
-  get 'templates', to: 'static_pages#templates'
 
-  resource :profile, only: %i[show edit update destroy]
+  resources :profiles, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
   resources :shortcuts, only: %i[index]
   resources :password_resets, only: %i[new create edit update]
+  resources :templates, only: %i[index new create destroy]
 
   #/google_login_api/callbackに来るPOSTリクエストをcallbackアクションで
   post '/google_login_api/callback', to: 'google_login_api#callback'

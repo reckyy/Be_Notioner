@@ -1,0 +1,12 @@
+<section class="text-gray-600 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          投稿
+          <img src="https://file.notion.so/f/s/03e8fadf-f1a1-4373-8040-a10093e540b2/notion-logo.svg?id=afd237b0-8678-4b9e-87ef-cbcdf5b5dab5&table=block&spaceId=e12b42ac-4e54-476f-a4f5-7d6bdb1e61e2&expirationTimestamp=1686921282132&signature=6hYdgzRom0FQof6lTdt5KKXSvLV9BSAJkCXQx5t4Z9s&downloadName=notion-logo.svg" class="inline-block h-8 w-8">
+        </h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">テンプレート投稿してくださりありがとうございます！<p>
+    </div>
+    <%= render 'form', { template: @template } %>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<div class="lg:w-1/2 md:w-2/3 mx-auto">
+  <div class="flex flex-wrap -m-2">
+  <%= form_with model: template, local: true do |f| %>
+    <div class="p-2 w-2/3">
+      <div class="relative">
+        <%= f.label :name, class: "leading-7 text-sm text-gray-600" %>
+        <%= f.text_field :name, class: "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" %>
+      </div>
+    </div>
+    <div class="p-2 w-full">
+      <div class="relative">
+        <%= f.label :url, class: "leading-7 text-sm text-gray-600" %>
+        <%= f.text_area :url, class: "w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" %>
+      </div>
+    </div>
+    <div class="p-2 w-full">
+      <%= f.submit '投稿', class: "flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
+    </div>
+  <% end %>
+  </div>
+</div>

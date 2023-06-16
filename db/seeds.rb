@@ -7,9 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-20.times do
-  Shortcut.create(
-    title: Faker::Name.first_name,
-    keys: Faker::Name.unique.last_name
+10.times do |n|
+  User.create!(
+    name: "test#{n + 1}",
+    email: "test#{n + 5}@example.com",
+    password: "password",
+    password_confirmation: "password"
+  )
+end
+
+20.times do |m|
+  Template.create(
+    user: User.offset(rand(User.count)).first,
+    name: "タイトル#{m + 1}",
+    url: "https://be-notioner.com"
   )
 end
