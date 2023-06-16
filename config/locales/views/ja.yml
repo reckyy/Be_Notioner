@@ -6,6 +6,7 @@ ja:
     profile: 'プロフィール'
     logout: 'ログアウト'
     quit: '退会する'
+    delete: '削除'
     shortcut: 'ショートカット'
     templates: 'テンプレート'
     questions: '質問'

@@ -56,6 +56,8 @@
   </td>
 
   <td class="h-px w-px whitespace-nowrap">
-    <p class="text-red-600 text-sm">削除</p>
+  <% if current_user.own?(template) %>
+    <p class="text-red-600 text-sm"><%= link_to (t 'defaults.delete'), template_path(template), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' } %></p>
+  <% end %>
   </td>
 </tr>
