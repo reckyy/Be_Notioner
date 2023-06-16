@@ -36,6 +36,7 @@
 
   <td class="h-px w-px whitespace-nowrap">
     <div class="px-6 py-3">
+    <%= link_to profile_path(template.user) do %>
       <div class="flex items-center gap-x-2">
         <% if template.user.avatar.attached? %>
           <%= image_tag template.user.avatar, class: "inline-block h-6 w-6 rounded-full" %>
@@ -48,6 +49,7 @@
           </span>
         </div>
       </div>
+      <% end %>
     </div>
   </td>
 

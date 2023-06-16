@@ -6,8 +6,8 @@
     <div class="lg:w-1/2 md:w-2/3 mx-auto">
     <div class="avatar">
       <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-        <% if current_user.avatar.attached? %>
-          <%= image_tag current_user.avatar %>
+        <% if @user.avatar.attached? %>
+          <%= image_tag @user.avatar %>
         <% else %>
           <%= image_tag('user_sample.png', size: "200x200") %>
         <% end %>
@@ -17,22 +17,24 @@
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="name" class="leading-7 text-sm text-gray-600"><%= t(User.human_attribute_name(:name)) %></label>
-            <input type="name" id="name" name="name" value="<%= current_user.name %>" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <input type="name" id="name" name="name" value="<%= @user.name %>" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-1/2">
           <div class="relative">
             <label for="email" class="leading-7 text-sm text-gray-600"><%= t(User.human_attribute_name(:email)) %></label>
-            <input type="email" id="email" name="email" value="<%= current_user.email %>" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <input type="email" id="email" name="email" value="<%= @user.email %>" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
         </div>
         <div class="p-2 w-full">
           <div class="relative">
             <label for="introduction" class="leading-7 text-sm text-gray-600"><%= t(User.human_attribute_name(:introduction)) %></label>
-            <textarea id="introduction" name="introduction" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"><%= current_user.introduction %></textarea>
+            <textarea id="introduction" name="introduction" readonly class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"><%= @user.introduction %></textarea>
           </div>
         </div>
-        <%= link_to (t '.profile_update'), edit_profile_path, class: "flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
+        <% if current_user == @user %>
+          <%= link_to (t '.profile_update'), edit_profile_path(@user), class: "flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg" %>
+        <% end %>
       </div>
     </div>
   </div>

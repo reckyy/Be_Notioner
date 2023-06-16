@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'privacy', to: 'static_pages#privacy'
   get 'terms', to: 'static_pages#terms'
 
-  resource :profile, only: %i[show edit update destroy]
+  resources :profiles, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
   resources :shortcuts, only: %i[index]
   resources :password_resets, only: %i[new create edit update]
