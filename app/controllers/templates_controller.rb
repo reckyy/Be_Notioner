@@ -10,7 +10,7 @@ class TemplatesController < ApplicationController
 
   def create
     @template = current_user.templates.build(template_params)
-    if @template.save!
+    if @template.save
       redirect_to templates_path, success: (t '.success')
     else
       flash.now[:danger] = (t '.fail')
