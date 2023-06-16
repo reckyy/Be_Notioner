@@ -9,3 +9,6 @@ ja:
         introduction: '自己紹介'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
+      template:
+        name: 'テンプレート名'
+        url: 'テンプレートのURL'
