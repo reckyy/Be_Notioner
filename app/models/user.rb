@@ -18,4 +18,8 @@ class User < ApplicationRecord
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize_to_limit: [200, 200]
   end
+
+  def own?(object)
+    object.user_id == id #current_userというインスタンスに対して呼び出すと、右辺のidはUserインスタンス（この場合current_user）のidを指す
+  end
 end
