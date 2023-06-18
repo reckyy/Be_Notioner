@@ -194,6 +194,7 @@ GEM
     google-api-client (0.53.0)
       google-apis-core (~> 0.1)
       google-apis-generator (~> 0.1)
+    google-api-ruby-client (9001.0)
     google-apis-core (0.11.0)
       addressable (~> 2.5, >= 2.5.1)
       googleauth (>= 0.16.2, < 2.a)
@@ -471,6 +472,7 @@ DEPENDENCIES
   faker
   fog-aws
   google-api-client
+  google-api-ruby-client
   googleauth
   importmap-rails
   jbuilder
