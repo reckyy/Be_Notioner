@@ -1,0 +1,2 @@
+class QiitaArticlesController < ApplicationController
+end
