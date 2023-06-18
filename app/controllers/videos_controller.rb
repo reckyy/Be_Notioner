@@ -8,12 +8,14 @@ class VideosController < ApplicationController
     options = {
       q: "Notion",
       type: 'video',
-      max_results: 2,
-      order: :date,
+      max_results: 5,
+      order: :relevance,
       region_code: 'JP',
       relevance_language: 'ja',
+      video_category_id: '28'#Notionのカテゴリー。
     }
     Youtube.list_searches(:snippet, **options)#:snippetではエラー。一つの引数しか受け付けていない。
+    #直接list_searchesメソッドでは視聴回数を取得できないため、list_videosメソッドを別途用いる必要がある。
   end
 
   def index
