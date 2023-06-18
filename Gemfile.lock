@@ -470,6 +470,7 @@ DEPENDENCIES
   enum_help
   factory_bot_rails
   faker
+  faraday
   fog-aws
   google-api-client
   google-api-ruby-client
