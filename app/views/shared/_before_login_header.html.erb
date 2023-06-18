@@ -12,7 +12,11 @@
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost m-1"><%= (t 'defaults.articles') %></label>
         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a><%= image_tag 'yt_icon_rgb.png', class: "inline-block h-6 w-6" %>Youtube</a></li>
+          <li>
+            <%= link_to videos_path, class: "link link-hover" do %>
+              <%= image_tag 'yt_icon_rgb.png', class: "inline-block h-6 w-6" %>Youtube
+            <% end %>
+          </li>
           <li><a><%= image_tag 'qiita.png', class: "inline-block h-6 w-6" %>Qiita</a></li>
           <li><a><%= image_tag 'zenn.png', class: "inline-block h-6 w-6" %>Zenn</a></li>
         </ul>

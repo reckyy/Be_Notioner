@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Videos</title>
+</head>
+<body>
+    <h1>YouTube Videos</h1>
+    <ul>
+        <% @youtube_videos.items.each do |video| %>
+            <li>
+                <a href="https://www.youtube.com/watch?v=<%= video.id.video_id %>">
+                    <%= video.snippet.title %>
+                    <img src="<%= video.snippet.thumbnails.high.url %>" >
+                </a>
+            </li>
+        <% end %>
+    </ul>
+</body>
+</html>
