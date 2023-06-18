@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
+  get 'videos', to: 'videos#index'
+
   #お問合せフォーム
   get 'contact', to: 'static_pages#contact'
   get 'privacy', to: 'static_pages#privacy'
