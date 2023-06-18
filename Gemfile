@@ -75,6 +75,9 @@ gem 'whenever'
 #GoogleAuthのライブラリ、Googleログイン用
 gem 'googleauth'
 
+#Youtube Data APIを使用するためのライブラリ
+gem 'google-api-client'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
