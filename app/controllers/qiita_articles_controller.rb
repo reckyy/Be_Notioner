@@ -5,6 +5,10 @@ class QiitaArticlesController < ApplicationController
 
   BASE_URL = 'https://qiita.com'
 
+  def popular
+    @popular_articles = order_of_popularity
+  end
+
   def order_of_popularity
     popular_articles = get_articles
     ogp_info = popular_articles.map do |article|
