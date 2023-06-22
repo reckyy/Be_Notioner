@@ -87,6 +87,9 @@ gem 'faraday'
 #nokogiriのインストール
 gem 'nokogiri'
 
+#Sidekiq追加（Heroku側でjob実行のため）
+gem 'sidekiq'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
