@@ -42,6 +42,7 @@ class QiitaArticle < ApplicationRecord
       qiita_article = find_or_initialize_by(url: article_data[:url]) do |article|
         article.title = article_data[:title]
         article.likes_count = article_data[:likes_count]
+        article.created_at_qiita = DateTime.parse(article_data[:created_at_qiita])
       end
       qiita_article.save!
       qiita_article.fetch_and_save_ogp_info!
