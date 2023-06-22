@@ -32,7 +32,8 @@ class QiitaArticle < ApplicationRecord
         fetched_articles << { 
           title: item['title'], 
           url: item['url'], 
-          likes_count: item['likes_count'] 
+          likes_count: item['likes_count'],
+          created_at_qiita: item['created_at']
         }
       end
     end
