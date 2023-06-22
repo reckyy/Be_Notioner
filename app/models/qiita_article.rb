@@ -1,6 +1,6 @@
 class QiitaArticle < ApplicationRecord
 
-  has_one :ogp_information, as: :informable #ポリモーフィック関連
+  has_one :ogp_information, as: :informable, dependent: :destroy #ポリモーフィック関連
 
   validates :title, presence: true
   valedates :url, presence: true, uniqueness: true
