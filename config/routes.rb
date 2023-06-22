@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'videos', to: 'videos#index'
   get 'qiita_articles', to: 'qiita_articles#index'
   get '/popular', to: 'qiita_articles#index', as: :popular
+  get '/recent', to: 'qiita_articles#recent', as: 'recent'
 
 
   #お問合せフォーム
