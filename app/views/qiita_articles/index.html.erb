@@ -1,21 +1,60 @@
 <!-- Card Blog -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Title -->
-  <div class="mb-4 border-b border-gray-200">
-    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center">
-      <li class="mr-2">
-        <%= button_to "Profile", popular_path, method: :get, class: "inline-block p-4 border-b-2 rounded-t-lg", id: "popular-button" %>
-      </li>
-      <li class="mr-2">
-        <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" type="button">Dashboard</button>
-      </li>
+
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+        <li class="mr-2" role="presentation">
+            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">人気順</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">新着順</button>
+        </li>
     </ul>
-  </div>
-  <!-- End Title -->
-
-  <div id="popular-section">
-    <%= render partial: 'popular', locals: { articles: @popular_articles } %>
-  </div>
-
 </div>
-<!-- End Card Blog -->
+<div id="myTabContent">
+    <div class="hidden p-4 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
+        <!-- Grid -->
+        <% @popular_articles.each do |article| %>
+          <%= link_to article.url, class: "group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" do %>
+            <!-- Card -->
+              <div class="aspect-w-16 aspect-h-9">
+                <%= image_tag article.ogp_information[:image] %>
+              </div>
+              <div class="p-4 md:p-5">
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
+                  <%= article.title %>
+                </h3>
+              </div>
+            <!-- End Card -->
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+    <div class="hidden p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
+        <!-- Grid -->
+        <% @recent_articles.each do |article| %>
+          <%= link_to article.url, class: "group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" do %>
+            <!-- Card -->
+              <div class="aspect-w-16 aspect-h-9">
+                <%= image_tag article.ogp_information[:image] %>
+              </div>
+              <div class="p-4 md:p-5">
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
+                  <%= article.title %>
+                </h3>
+              </div>
+            <!-- End Card -->
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+</div>
