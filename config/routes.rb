@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   get 'videos', to: 'videos#index'
+  get 'qiita_articles', to: 'qiita_articles#index'
+
 
   #お問合せフォーム
   get 'contact', to: 'static_pages#contact'

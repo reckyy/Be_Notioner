@@ -81,6 +81,12 @@ gem 'google-api-client'
 #一応インストール
 gem 'google-api-ruby-client'
 
+#HTTPリクエストを行うライブラリ、Net::HTTPもあるが今回はこれを使ってみる
+gem 'faraday'
+
+#nokogiriのインストール
+gem 'nokogiri'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

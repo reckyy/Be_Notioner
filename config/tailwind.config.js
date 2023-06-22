@@ -5,7 +5,8 @@ module.exports = {
     './public/*.html',
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
-    './app/views/**/*.{erb,haml,html,slim}'
+    './app/views/**/*.{erb,haml,html,slim}',
+    './node_modules/flowbite/**/*.js'
   ],
   theme: {
     extend: {
@@ -20,7 +21,9 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/forms'),
-    require('daisyui')
+    require('daisyui'),
+    require('preline/plugin'),
+    require('flowbite/plugin')
   ],
   daisyui: {
     themes: ["light"],

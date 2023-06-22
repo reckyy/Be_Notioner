@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_18_013552) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_22_074749) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_013552) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "ogp_informations", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "url", null: false
+    t.string "image", null: false
+    t.string "description", null: false
+    t.string "informable_type", null: false
+    t.integer "informable_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["informable_type", "informable_id"], name: "index_ogp_informations_on_informable_type_and_informable_id"
+  end
+
+  create_table "qiita_articles", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.integer "likes_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "created_at_qiita"
   end
 
   create_table "shortcuts", force: :cascade do |t|

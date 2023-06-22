@@ -17,4 +17,9 @@ every 1.day, at: '8:00 am' do
   rake '-s sitemap:refresh'
 end
 
+every 1.week do
+  runner 'FetchAndSaveArticlesJob.perform_later'
+end
+
+
 # Learn more: http://github.com/javan/whenever

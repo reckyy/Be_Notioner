@@ -17,7 +17,11 @@
               <%= image_tag 'yt_icon_rgb.png', class: "inline-block h-6 w-6" %>Youtube
             <% end %>
           </li>
-          <li><a><%= image_tag 'qiita.png', class: "inline-block h-6 w-6" %>Qiita</a></li>
+          <li>
+            <%= link_to qiita_articles_path, class: "link link-hover" do %>
+              <%= image_tag 'qiita.png', class: "inline-block h-6 w-6" %>Qiita
+            <% end %>
+          </li>
           <li><a><%= image_tag 'zenn.png', class: "inline-block h-6 w-6" %>Zenn</a></li>
         </ul>
       </div>
