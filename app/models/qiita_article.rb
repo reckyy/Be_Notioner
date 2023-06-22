@@ -9,6 +9,7 @@ class QiitaArticle < ApplicationRecord
   validates :title, presence: true
   validates :url, presence: true, uniqueness: true
   validates :likes_count, presence: true
+  validates :created_at_qiita, presence: true
 
   BASE_URL = 'https://qiita.com'
   TAG = 'Notion'
