@@ -1,0 +1,21 @@
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+  <div class="mb-4 border-b border-gray-200">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center">
+      <li class="mr-2">
+        <%= button_to "Profile", popular_path, method: :get, class: "inline-block p-4 border-b-2 rounded-t-lg", id: "popular-button" %>
+      </li>
+      <li class="mr-2">
+        <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300" type="button">Dashboard</button>
+      </li>
+    </ul>
+  </div>
+  <!-- End Title -->
+
+  <div id="popular-section">
+    <%= render partial: 'popular', locals: { articles: @popular_articles } %>
+  </div>
+
+</div>
+<!-- End Card Blog -->
