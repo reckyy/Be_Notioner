@@ -5,7 +5,7 @@ class CreateOgpInformations < ActiveRecord::Migration[7.0]
       t.string :title, null: false
       t.string :url, null: false
       t.string :image, null: false
-      t.string :description, null: false
+      t.string :description
       t.string :informable_type, null: false
       t.integer :informable_id, null: false
 
