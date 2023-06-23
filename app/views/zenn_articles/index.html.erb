@@ -1,4 +1,60 @@
-<div>
-  <h1 class="font-bold text-4xl">ZennArticles#index</h1>
-  <p>Find me in app/views/zenn_articles/index.html.erb</p>
+<!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+
+<div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+        <li class="mr-2" role="presentation">
+            <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">人気順</button>
+        </li>
+        <li class="mr-2" role="presentation">
+            <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">新着順</button>
+        </li>
+    </ul>
+</div>
+<div id="myTabContent">
+    <div class="hidden p-4 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
+        <!-- Grid -->
+        <% @alltime_articles.each do |article| %>
+          <%= link_to article.url, class: "group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" do %>
+            <!-- Card -->
+              <div class="aspect-w-16 aspect-h-9">
+                <%= image_tag article.ogp_information[:image] %>
+              </div>
+              <div class="p-4 md:p-5">
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
+                  <%= article.title %>
+                </h3>
+              </div>
+            <!-- End Card -->
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+    <div class="hidden p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10 lg:mb-14">
+        <!-- Grid -->
+        <% @latest_articles.each do |article| %>
+          <%= link_to article.url, class: "group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition" do %>
+            <!-- Card -->
+              <div class="aspect-w-16 aspect-h-9">
+                <%= image_tag article.ogp_information[:image] %>
+              </div>
+              <div class="p-4 md:p-5">
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
+                  <%= article.title %>
+                </h3>
+              </div>
+            <!-- End Card -->
+            <% end %>
+          <% end %>
+        </div>
+    </div>
 </div>
