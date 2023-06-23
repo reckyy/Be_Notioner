@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'videos', to: 'videos#index'
   get 'qiita_articles', to: 'qiita_articles#index'
+  get 'zenn_articles', to: 'zenn_articles#index'
 
 
   #お問合せフォーム
