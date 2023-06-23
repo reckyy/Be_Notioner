@@ -5,6 +5,5 @@ class OgpInformation < ApplicationRecord
     validates :title
     validates :url
     validates :image
-    validates :description
   end
 end

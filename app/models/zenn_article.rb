@@ -20,7 +20,7 @@ class ZennArticle < ApplicationRecord
 
       articles.each do |article|
         title = article.at_css('.ArticleList_title__P6X2G').text.strip
-        url = "https://zenn.dev#{article['href']}"
+        url = "https://zenn.dev" + article.css('.ArticleList_link__vf_6E').attr('href').value
         likes_count_raw = article.at_css('.ArticleList_like__c4148')
         likes_count = likes_count_raw.nil? ? 0 : likes_count_raw.text.strip.gsub(/\D/, '')
 
@@ -39,10 +39,10 @@ class ZennArticle < ApplicationRecord
     html = URI.open(url).read
     doc = Nokogiri::HTML.parse(html)
     ogp_info = build_ogp_information unless ogp_information
-    ogp_info.title = doc.xpath('/html/head/meta[@property="og:title"]/@content').to_s
-    ogp_info.url = doc.xpath('/html/head/meta[@property="og:url"]/@content').to_s
-    ogp_info.image = doc.xpath('/html/head/meta[@property="og:image"]/@content').to_s
-    ogp_info.description = doc.xpath('/html/head/meta[@name="zenn:description"]/@content').text.strip
-    ogp_info.save!
+    ogp_information.title = doc.xpath('/html/head/meta[@property="og:title"]/@content').to_s
+    ogp_information.url = doc.xpath('/html/head/meta[@property="og:url"]/@content').to_s
+    ogp_information.image = doc.xpath('/html/head/meta[@property="og:image"]/@content').to_s
+    ogp_information.description = doc.xpath('/html/head/meta[@name="zenn:description"]/@content').text.strip
+    ogp_information.save!
   end
 end
