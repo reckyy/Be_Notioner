@@ -4,7 +4,7 @@ class QiitaArticle < ApplicationRecord
   require 'open-uri' #URLへアクセスするようライブラリ
   require 'nokogiri' #取得したURLをスクレイピング
 
-  has_many :bookmarks, as: :bookmarkable
+  has_many :bookmarks, as: :bookmarkable, dependent: :destroy
 
   has_one :ogp_information, as: :informable, dependent: :destroy #ポリモーフィック関連
 
