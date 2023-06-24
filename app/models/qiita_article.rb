@@ -58,7 +58,7 @@ class QiitaArticle < ApplicationRecord
     html = URI.open(url).read
     doc = Nokogiri::HTML.parse(html)
 
-    ogp_info = build_ogp_information unless ogp_information
+    ogp_information = build_ogp_information unless ogp_information
     ogp_information.title = doc.xpath('/html/head/meta[@property="og:title"]/@content').to_s
     ogp_information.url = doc.xpath('/html/head/meta[@property="og:url"]/@content').to_s
     ogp_information.image = doc.xpath('/html/head/meta[@property="og:image"]/@content').to_s
