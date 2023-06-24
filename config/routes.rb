@@ -17,6 +17,10 @@ Rails.application.routes.draw do
 
   resources :profiles, only: %i[show edit update destroy]
   resources :users, only: %i[new create]
+  resources :users do
+    resources :bookmarks, only: [:index, :create, :destroy]
+  end
+  
   resources :shortcuts, only: %i[index]
   resources :password_resets, only: %i[new create edit update]
   resources :templates, only: %i[index new create destroy]
