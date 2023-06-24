@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   has_many :templates, dependent: :destroy
 
+  has_many :bookmarks
+
   enum login_type: { sorcery: 0, google: 1 }
 
   has_one_attached :avatar do |attachable|

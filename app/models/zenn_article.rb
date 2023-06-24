@@ -3,6 +3,8 @@ class ZennArticle < ApplicationRecord
   validates :url, presence: true, uniqueness: true
   validates :order_type, presence: true
 
+  has_many :bookmarks, as: :bookmarkable
+
   has_one :ogp_information, as: :informable, dependent: :destroy
 
   require 'nokogiri'
