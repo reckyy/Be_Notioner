@@ -25,15 +25,15 @@ class User < ApplicationRecord
     object.user_id == id #current_userというインスタンスに対して呼び出すと、右辺のidはUserインスタンス（この場合current_user）のidを指す
   end
 
-  def add_bookmark(bookmarkable)
-    self.bookmarks.find_or_create_by(bookmarkable: bookmarkable)
+  def bookmark(bookmarkable)
+    bookmarks.find_or_create_by(bookmarkable: bookmarkable)
   end
 
-  def remove_bookmark(bookmarkable)
-    self.bookmarks.find_by(bookmarkable: bookmarkable)&.destroy
+  def unbookmark(bookmarkable)
+    bookmarks.where(bookmarkable: bookmarkable).destroy_all
   end
 
   def bookmarked?(bookmarkable)
-    self.bookmarks.where(bookmarkable: bookmarkable).exists?
+    bookmarks.exists?(bookmarkable: bookmarkable)
   end
 end
