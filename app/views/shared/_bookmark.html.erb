@@ -1,0 +1,5 @@
+<%= form_with url: bookmarks_path, method: :post do %>
+  <%= hidden_field_tag :bookmarkable_type, bookmarkable.class.name %>
+  <%= hidden_field_tag :bookmarkable_id, bookmarkable.id %>
+  <%= submit_tag 'Bookmark' %>
+<% end %>
