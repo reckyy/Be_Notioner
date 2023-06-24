@@ -3,8 +3,7 @@ class BookmarksController < ApplicationController
   before_action :set_bookmarkable
 
   def index
-    @user = User.find(params[:user_id])
-    @bookmarks = @user.bookmarks
+    @bookmarks = current_user.bookmarks
   end
 
   def create
