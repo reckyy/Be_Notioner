@@ -8,16 +8,16 @@ class BookmarksController < ApplicationController
 
   def create
     if current_user.bookmark(@bookmarkable)
-      redirect_back fallback_location: root_path, success: (t '.success')
+      redirect_back_or_to root_path, success: (t '.success')
     else
       flash.now[:danger] = (t '.danger')
-      redirect_back fallback_location: root_path, status: :unprocessable_entity
+      redirect_back_or_to root_path, status: :unprocessable_entity
     end
   end
 
   def destroy
     current_user.unbookmark(@bookmarkable)
-    redirect_back fallback_location: root_path, status: :see_other, success: (t '.success')
+    redirect_back_or_to root_path, status: :see_other, success: (t '.success')
   end
 
   private

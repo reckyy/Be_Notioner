@@ -1,4 +1,4 @@
-<%= form_with url: bookmarks_path, method: :post do %>
+<%= form_with url: bookmarks_path, data: { turbo_method: :post } do %>
   <%= hidden_field_tag :bookmarkable_type, bookmarkable.class.name %>
   <%= hidden_field_tag :bookmarkable_id, bookmarkable.id %>
   <%= button_tag(type: 'submit') do %>
