@@ -1,0 +1,1 @@
+$("#<%= @bookmark.bookmarkable_type.downcase %>-bookmark-icon-<%= @bookmark.bookmarkable.id %>").replaceWith('<%= j render partial: "bookmarks/unbookmark", locals: { bookmarkable: @bookmark.bookmarkable, bookmarkable_type: @bookmark.bookmarkable_type } %>');
