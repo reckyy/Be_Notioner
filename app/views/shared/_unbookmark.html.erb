@@ -1,4 +1,4 @@
-<div id="<%= bookmarkable_type.downcase %>-bookmark-icon-<%= bookmarkable.id %>">
+<div id="<%= bookmarkable.class.name.downcase %>-bookmark-icon-<%= bookmarkable.id %>">
   <%= form_with url: bookmark_path(id: current_user.bookmarks.find_by(bookmarkable: bookmarkable).id, bookmarkable_id: bookmarkable.id, bookmarkable_type: bookmarkable.class.name), method: :delete, data: { turbo_method: :delete }, remote: true do %>
     <%= button_tag(type: 'submit') do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

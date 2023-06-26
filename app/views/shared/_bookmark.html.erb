@@ -1,4 +1,4 @@
-<div id="<%= bookmarkable_type.downcase %>-bookmark-icon-<%= bookmarkable.id %>">
+<div id="<%= bookmarkable.class.name.downcase %>-bookmark-icon-<%= bookmarkable.id %>">
   <%= form_with url: bookmarks_path, data: { turbo_method: :post }, remote: true do %>
     <%= hidden_field_tag :bookmarkable_type, bookmarkable.class.name %>
     <%= hidden_field_tag :bookmarkable_id, bookmarkable.id %>

@@ -7,17 +7,18 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    if current_user.bookmark(@bookmarkable)
-      redirect_back_or_to root_path, success: (t '.success')
-    else
-      flash.now[:danger] = (t '.danger')
-      redirect_back_or_to root_path, status: :unprocessable_entity
+    @bookmark = current_user.bookmark(@bookmarkable)
+    respond_to do |format|
+      format.js { render :create }
     end
   end
 
   def destroy
+    @bookmarkable_type = @bookmarkable.class.to_s
     current_user.unbookmark(@bookmarkable)
-    redirect_back_or_to root_path, status: :see_other, success: (t '.success')
+    respond_to do |format|
+      format.js { render :destroy }
+    end
   end
 
   private
