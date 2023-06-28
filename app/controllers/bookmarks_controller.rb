@@ -1,36 +1,26 @@
 class BookmarksController < ApplicationController
   before_action :require_login
-  before_action :set_bookmarkable
 
   def index
     @bookmarks = current_user.bookmarks
   end
 
   def create
-    @bookmark = current_user.bookmark(@bookmarkable)
-    respond_to do |format|
-      format.js { render :create }
-    end
+    @bookmarkable = find_bookmarkable
+    current_user.bookmark(@bookmarkable)
+    redirect_to qiita_articles_path
   end
 
   def destroy
-    @bookmarkable_type = @bookmarkable.class.to_s
+    @bookmarkable = find_bookmarkable
     current_user.unbookmark(@bookmarkable)
-    respond_to do |format|
-      format.js { render :destroy }
-    end
+    redirect_to qiita_articles_path
   end
 
   private
 
-  def set_bookmarkable
-    @bookmarkable = if params[:bookmarkable_type] == 'QiitaArticle'
-                      QiitaArticle.find(params[:bookmarkable_id])
-                    elsif params[:bookmarkable_type] == 'ZennArticle'
-                      ZennArticle.find(params[:bookmarkable_id])
-                    else
-                      # その他のブックマーク可能なオブジェクトを追加
-                    end
+  def find_bookmarkable
+    params[:bookmarkable_type].constantize.find(params[:bookmarkable_id])
   end
 
   def bookmark_params

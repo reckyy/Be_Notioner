@@ -36,4 +36,8 @@ class User < ApplicationRecord
   def bookmarked?(bookmarkable)
     bookmarks.exists?(bookmarkable: bookmarkable)
   end
+
+  def find_bookmark(bookmarkable)
+    bookmarks.find_by(bookmarkable: bookmarkable)
+  end
 end
