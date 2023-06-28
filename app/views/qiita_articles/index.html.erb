@@ -23,12 +23,15 @@
                 <%= image_tag article.ogp_information[:image] %>
               </div>
               <div class="p-4 md:p-5">
-                <p class="mt-2 text-xs uppercase text-gray-600">
-                  いいね数 : <%= article.likes_count %>
-                </p>
                 <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
                   <%= article.title %>
                 </h3>
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  <%= render 'shared/bookmark_button', bookmarkable: article %>
+                </p>
               </div>
             <!-- End Card -->
             <% end %>
@@ -45,12 +48,15 @@
                 <%= image_tag article.ogp_information[:image] %>
               </div>
               <div class="p-4 md:p-5">
-                <p class="mt-2 text-xs uppercase text-gray-600">
-                  いいね数 : <%= article.likes_count %>
-                </p>
                 <h3 class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600">
                   <%= article.title %>
                 </h3>
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  いいね数 : <%= article.likes_count %>
+                </p>
+                <p class="mt-2 text-xs uppercase text-gray-600">
+                  <%= render 'shared/bookmark_button', bookmarkable: article %>
+                </p>
               </div>
             <!-- End Card -->
             <% end %>

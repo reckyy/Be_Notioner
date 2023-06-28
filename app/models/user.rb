@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   has_many :templates, dependent: :destroy
 
+  has_many :bookmarks
+
   enum login_type: { sorcery: 0, google: 1 }
 
   has_one_attached :avatar do |attachable|
@@ -21,5 +23,21 @@ class User < ApplicationRecord
 
   def own?(object)
     object.user_id == id #current_userというインスタンスに対して呼び出すと、右辺のidはUserインスタンス（この場合current_user）のidを指す
+  end
+
+  def bookmark(bookmarkable)
+    bookmarks.find_or_create_by(bookmarkable: bookmarkable)
+  end
+
+  def unbookmark(bookmarkable)
+    bookmarks.where(bookmarkable: bookmarkable).destroy_all
+  end
+
+  def bookmarked?(bookmarkable)
+    bookmarks.exists?(bookmarkable: bookmarkable)
+  end
+
+  def find_bookmark(bookmarkable)
+    bookmarks.find_by(bookmarkable: bookmarkable)
   end
 end

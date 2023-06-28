@@ -3,6 +3,8 @@ class ZennArticle < ApplicationRecord
   validates :url, presence: true, uniqueness: true
   validates :order_type, presence: true
 
+  has_many :bookmarks, as: :bookmarkable, dependent: :destroy
+
   has_one :ogp_information, as: :informable, dependent: :destroy
 
   require 'nokogiri'
@@ -38,7 +40,7 @@ class ZennArticle < ApplicationRecord
   def fetch_and_save_ogp_info!
     html = URI.open(url).read
     doc = Nokogiri::HTML.parse(html)
-    ogp_info = build_ogp_information unless ogp_information
+    ogp_information = build_ogp_information unless ogp_information
     ogp_information.title = doc.xpath('/html/head/meta[@property="og:title"]/@content').to_s
     ogp_information.url = doc.xpath('/html/head/meta[@property="og:url"]/@content').to_s
     ogp_information.image = doc.xpath('/html/head/meta[@property="og:image"]/@content').to_s

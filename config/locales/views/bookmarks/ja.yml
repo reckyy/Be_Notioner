@@ -1,0 +1,8 @@
+ja:
+  bookmarks:
+    create:
+      success: 'ブックマークに成功しました'
+      danger: 'ブックマークに失敗しました'
+    destroy:
+      success: 'ブックマークを削除しました'
+      danger: 'ブックマークの削除に失敗しました'

@@ -1,0 +1,5 @@
+<% if current_user.bookmarked?(bookmarkable) %>
+  <%= render 'shared/unbookmark', bookmarkable: bookmarkable %>
+<% else %>
+  <%= render 'shared/bookmark', bookmarkable: bookmarkable %>
+<% end %>
